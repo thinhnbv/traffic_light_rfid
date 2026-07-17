@@ -27,49 +27,10 @@ Designed and verified for safety-critical edge deployment on the **Xiaomeige ACG
 ```
 Traffic_Light_RFID/
 ├── rtl/                        # Source Verilog RTL Files
-│   ├── traffic_top.v           # Physical top-level (Gowin target wrapper)
-│   ├── traffic_node.v          # Functional top-level for 1 intersection
-│   ├── traffic_fsm.v           # 10-state TLC state machine logic
-│   ├── phase_timer.v           # Generic down-counter for phase timing
-│   ├── rc522_driver_x4.v       # Shared SPI reader driver for 4x RC522
-│   ├── spi_master.v            # Standard SPI Master core
-│   ├── tag_priority_lut.v      # Priority tier LUT for registered tag UIDs
-│   ├── priority_arbiter.v      # Resolves multi-axis priority conflicts
-│   ├── direction_detector.v    # Estimates vehicle entrance/exit confidence
-│   ├── seg7_countdown.v        # 74HC595 shift register 7-segment display driver
-│   ├── cascade_ctrl.v          # Coordination logic for RS485 data packets
-│   ├── cascade_tx.v            # Packet assembly and serialization
-│   ├── cascade_rx.v            # Packet parsing and deserialization
-│   ├── uart_tx_core.v          # Customized UART Transmitter
-│   ├── uart_rx_core.v          # Customized UART Receiver
-│   ├── rs485_dir_ctrl.v        # Automates MAX485 driver enable direction
-│   ├── rst_sync.v              # Hardware Reset Synchronizer
-│   └── cdc_sync.v              # Clock Domain Crossing Synchronizer
 ├── tb/                         # Testbench Suite
-│   └── tb_traffic_top.v        # Comprehensive self-checking testbench (15 Scenarios)
 ├── sim/                        # Simulation Workspace for ModelSim
-│   ├── modelsim.ini            # ModelSim configuration file
-│   ├── project.cr.mti          # ModelSim compiler metadata
-│   ├── project.mpf             # ModelSim project file
-│   ├── run_sim.do              # Script to automate compiler and simulator
-│   ├── tb_traffic_top.vcd      # Compiled simulation waveform file
-│   ├── transcript              # Simulation log file
-│   ├── vsim.wlf                # ModelSim window log file
-│   └── work/                   # Compiled simulation library directory
 ├── spec/                       # System Specifications & Documentation
-│   ├── TLC_RFID_SPEC_v4.4.md   # System functional specification
-│   └── implementation_guide.md # Technical integration implementation guide
 ├── old-version/                # Legacy codes and configurations
-│   ├── rc522_driver.v          # Deprecated single RFID reader driver
-│   ├── spi_test_top.v          # Old hardware SPI verification module
-│   ├── tb_rc522_sim.v          # Obsolete RFID driver simulation testbench
-│   ├── tb_traffic_basic.v      # Baseline TLC logic verification script
-│   ├── tb_traffic_light_simple.v
-│   ├── traffic_light_simple.v  # Basic TLC controller without RFID
-│   ├── traffic_top_basic.v     # Legacy hardware top-level wrapper
-│   ├── traffic_top_rfid.v      # Early integration top-level wrapper
-│   ├── run_sim_traffic_light_simple.mpf
-│   └── run_sim_traffic_light_simple.cr.mti
 ├── work/                       # Gowin Synthesizer build metadata
 ├── traffic_top.cst             # Primary Pin Constraint file (Gowin)
 ├── spi_test.cst                # Physical Pin Constraint for SPI testing (Gowin)
@@ -82,6 +43,7 @@ Traffic_Light_RFID/
 ## 🧪 Simulation and Verification
 
 The system is validated through a self-checking testbench (`tb/tb_traffic_top.v`) consisting of **15 testcases** verifying:
+
 1. Normal cycle transitions (Green $\rightarrow$ Yellow $\rightarrow$ Red).
 2. Priority preemption on inactive axis.
 3. Preemption overlap on active axis.
@@ -97,13 +59,17 @@ The system is validated through a self-checking testbench (`tb/tb_traffic_top.v`
 
 1. Open **ModelSim / QuestaSim**.
 2. Navigate to the `sim` folder:
+
    ```tcl
    cd <your_project_path>/Traffic_Light_RFID/sim
    ```
+
 3. Execute the automated simulation script:
+
    ```tcl
    do run_sim.do
    ```
+
 4. Check the simulator transcript output for `TEST SUMMARY` (PASS/FAIL indicators).
 
 ---
@@ -117,4 +83,5 @@ The system is validated through a self-checking testbench (`tb/tb_traffic_top.v`
 ---
 
 ## 📄 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
