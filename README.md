@@ -33,7 +33,6 @@ Traffic_Light_RFID/
 ├── old-version/                # Legacy codes and configurations
 ├── work/                       # Gowin Synthesizer build metadata
 ├── traffic_top.cst             # Primary Pin Constraint file (Gowin)
-├── spi_test.cst                # Physical Pin Constraint for SPI testing (Gowin)
 ├── uid.txt                     # List of registered RFID card UIDs
 └── README.md                   # This documentation
 ```
