@@ -44,39 +44,44 @@ Traffic_Light_RFID/
 │   ├── uart_rx_core.v          # Customized UART Receiver
 │   ├── rs485_dir_ctrl.v        # Automates MAX485 driver enable direction
 │   ├── rst_sync.v              # Hardware Reset Synchronizer
-│   └── cdc_sync.v              # Clock Domain Crossing Synchronizer (for simulation)
+│   └── cdc_sync.v              # Clock Domain Crossing Synchronizer
 ├── tb/                         # Testbench Suite
 │   └── tb_traffic_top.v        # Comprehensive self-checking testbench (15 Scenarios)
-├── sim/                        # Simulation Directory
-│   └── run_sim.do              # ModelSim automated simulation script
-├── traffic_top.cst             # Physical Pin Mapping constraint file (Gowin)
+├── sim/                        # Simulation Workspace for ModelSim
+│   ├── modelsim.ini            # ModelSim configuration file
+│   ├── project.cr.mti          # ModelSim compiler metadata
+│   ├── project.mpf             # ModelSim project file
+│   ├── run_sim.do              # Script to automate compiler and simulator
+│   ├── tb_traffic_top.vcd      # Compiled simulation waveform file
+│   ├── transcript              # Simulation log file
+│   ├── vsim.wlf                # ModelSim window log file
+│   └── work/                   # Compiled simulation library directory
+├── spec/                       # System Specifications & Documentation
+│   ├── TLC_RFID_SPEC_v4.4.md   # System functional specification
+│   └── implementation_guide.md # Technical integration implementation guide
+├── old-version/                # Legacy codes and configurations
+│   ├── rc522_driver.v          # Deprecated single RFID reader driver
+│   ├── spi_test_top.v          # Old hardware SPI verification module
+│   ├── tb_rc522_sim.v          # Obsolete RFID driver simulation testbench
+│   ├── tb_traffic_basic.v      # Baseline TLC logic verification script
+│   ├── tb_traffic_light_simple.v
+│   ├── traffic_light_simple.v  # Basic TLC controller without RFID
+│   ├── traffic_top_basic.v     # Legacy hardware top-level wrapper
+│   ├── traffic_top_rfid.v      # Early integration top-level wrapper
+│   ├── run_sim_traffic_light_simple.mpf
+│   └── run_sim_traffic_light_simple.cr.mti
+├── work/                       # Gowin Synthesizer build metadata
+├── traffic_top.cst             # Primary Pin Constraint file (Gowin)
+├── spi_test.cst                # Physical Pin Constraint for SPI testing (Gowin)
 ├── uid.txt                     # List of registered RFID card UIDs
 └── README.md                   # This documentation
 ```
 
 ---
 
-## 🔧 Physical Pin Constraints (ACG525 Board)
-
-The pin assignments mapped in the `traffic_top.cst` file target the Xiaomeige ACG525 FPGA development board:
-
-* **System Clock**: `clk_osc` -> `T9` (50MHz crystal oscillator)
-* **Hardware Reset**: `rst_btn_n` -> `B16` (KEY0 active-low push button)
-* **SPI Bus (RC522)**:
-  * SCK: `G14`
-  * MOSI: `D17` (Connect to RC522 MOSI)
-  * MISO: `D18` (Connect to RC522 MISO)
-  * CS_N: West=`F18`, East=`F17`, South=`G18`, North=`G16`
-* **7-Segment Display (74HC595)**:
-  * DIO: `F4`
-  * RCLK: `F3`
-  * SCLK: `H4`
-
----
-
 ## 🧪 Simulation and Verification
 
-The system is validated through a self-checking testbench (`tb_traffic_top.v`) consisting of **15 testcases** verifying:
+The system is validated through a self-checking testbench (`tb/tb_traffic_top.v`) consisting of **15 testcases** verifying:
 1. Normal cycle transitions (Green $\rightarrow$ Yellow $\rightarrow$ Red).
 2. Priority preemption on inactive axis.
 3. Preemption overlap on active axis.
@@ -103,45 +108,11 @@ The system is validated through a self-checking testbench (`tb_traffic_top.v`) c
 
 ---
 
-## 🚀 How to Push to GitHub
+## 📊 Synthesis & Hardware Footprint (Target)
 
-Follow these steps to push this project to your existing GitHub repository:
-
-1. **Open your terminal** (Git Bash, Command Prompt, or PowerShell) and navigate to the project directory:
-   ```bash
-   cd D:/Dev/Code/Traffic_Light_RFID
-   ```
-
-2. **Initialize Git repository** (if not already done):
-   ```bash
-   git init
-   ```
-
-3. **Stage all files** for commit (creates a snapshot):
-   ```bash
-   git add .
-   ```
-
-4. **Commit the files** with a descriptive message:
-   ```bash
-   git commit -m "Initial commit of TLC-RFID v4.4 with 7-segment countdown display"
-   ```
-
-5. **Set the default branch to main**:
-   ```bash
-   git branch -M main
-   ```
-
-6. **Add the remote origin URL** (replace `YOUR_GITHUB_URL` with your actual repository link, e.g., `https://github.com/username/repo-name.git`):
-   ```bash
-   git remote add origin YOUR_GITHUB_URL
-   ```
-   *(Note: If you get an error saying remote origin already exists, run `git remote set-url origin YOUR_GITHUB_URL` instead)*
-
-7. **Push to GitHub**:
-   ```bash
-   git push -u origin main
-   ```
+* **Target Device**: Gowin GW5A-LV25MG121
+* **Expected Synthesis Frequency (Fmax)**: > 100 MHz (easily satisfying the 50 MHz clock requirement)
+* **Estimated Logic Footprint**: Low utilization (< 5% of device logic elements), making it highly optimized for edge deployment or integration into a larger SoC.
 
 ---
 
