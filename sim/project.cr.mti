@@ -1,0 +1,127 @@
+D:/Dev/Code/Traffic_Light_RFID/rtl/cascade_rx.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/cascade_rx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cascade_rx
+
+Top level modules:
+	cascade_rx
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/rst_sync.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/rst_sync.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rst_sync
+
+Top level modules:
+	rst_sync
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/cdc_sync.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/cdc_sync.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cdc_sync
+
+Top level modules:
+	cdc_sync
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/cascade_tx.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/cascade_tx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cascade_tx
+
+Top level modules:
+	cascade_tx
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/spi_master.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/spi_master.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module spi_master
+
+Top level modules:
+	spi_master
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/cascade_ctrl.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/cascade_ctrl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cascade_ctrl
+
+Top level modules:
+	cascade_ctrl
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/traffic_top.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/traffic_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module traffic_top
+
+Top level modules:
+	traffic_top
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/tag_priority_lut.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/tag_priority_lut.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tag_priority_lut
+
+Top level modules:
+	tag_priority_lut
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/traffic_node.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/traffic_node.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module traffic_node
+
+Top level modules:
+	traffic_node
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/traffic_fsm.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/traffic_fsm.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module traffic_fsm
+
+Top level modules:
+	traffic_fsm
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/uart_rx_core.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/uart_rx_core.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module uart_rx_core
+
+Top level modules:
+	uart_rx_core
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/uart_tx_core.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/uart_tx_core.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module uart_tx_core
+
+Top level modules:
+	uart_tx_core
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/rs485_dir_ctrl.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/rs485_dir_ctrl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rs485_dir_ctrl
+
+Top level modules:
+	rs485_dir_ctrl
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/phase_timer.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/phase_timer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module phase_timer
+
+Top level modules:
+	phase_timer
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/priority_arbiter.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/priority_arbiter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module priority_arbiter
+
+Top level modules:
+	priority_arbiter
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/direction_detector.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/direction_detector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module direction_detector
+
+Top level modules:
+	direction_detector
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/tb/tb_traffic_top.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/tb/tb_traffic_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_traffic_top
+
+Top level modules:
+	tb_traffic_top
+
+} {} {}} D:/Dev/Code/Traffic_Light_RFID/rtl/rc522_driver_x4.v {1 {vlog -work work -stats=none D:/Dev/Code/Traffic_Light_RFID/rtl/rc522_driver_x4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rc522_driver_x4
+
+Top level modules:
+	rc522_driver_x4
+
+} {} {}}

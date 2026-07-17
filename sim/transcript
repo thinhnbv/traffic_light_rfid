@@ -1,0 +1,171 @@
+do run_sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying D:/Dev/Code/Traffic_Light_RFID/sim/project.mpf
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:44 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/rst_sync.v 
+# -- Compiling module rst_sync
+# 
+# Top level modules:
+# 	rst_sync
+# End time: 13:18:44 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:44 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/cdc_sync.v 
+# -- Compiling module cdc_sync
+# 
+# Top level modules:
+# 	cdc_sync
+# End time: 13:18:44 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:44 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/phase_timer.v 
+# -- Compiling module phase_timer
+# 
+# Top level modules:
+# 	phase_timer
+# End time: 13:18:44 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:44 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/spi_master.v 
+# -- Compiling module spi_master
+# 
+# Top level modules:
+# 	spi_master
+# End time: 13:18:44 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:44 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/tag_priority_lut.v 
+# -- Compiling module tag_priority_lut
+# 
+# Top level modules:
+# 	tag_priority_lut
+# End time: 13:18:44 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:44 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/priority_arbiter.v 
+# -- Compiling module priority_arbiter
+# 
+# Top level modules:
+# 	priority_arbiter
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/direction_detector.v 
+# -- Compiling module direction_detector
+# 
+# Top level modules:
+# 	direction_detector
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/rc522_driver_x4.v 
+# -- Compiling module rc522_driver_x4
+# 
+# Top level modules:
+# 	rc522_driver_x4
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/uart_tx_core.v 
+# -- Compiling module uart_tx_core
+# 
+# Top level modules:
+# 	uart_tx_core
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/uart_rx_core.v 
+# -- Compiling module uart_rx_core
+# 
+# Top level modules:
+# 	uart_rx_core
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/cascade_tx.v 
+# -- Compiling module cascade_tx
+# 
+# Top level modules:
+# 	cascade_tx
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/cascade_rx.v 
+# -- Compiling module cascade_rx
+# 
+# Top level modules:
+# 	cascade_rx
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/cascade_ctrl.v 
+# -- Compiling module cascade_ctrl
+# 
+# Top level modules:
+# 	cascade_ctrl
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/rs485_dir_ctrl.v 
+# -- Compiling module rs485_dir_ctrl
+# 
+# Top level modules:
+# 	rs485_dir_ctrl
+# End time: 13:18:45 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:45 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/traffic_fsm.v 
+# -- Compiling module traffic_fsm
+# 
+# Top level modules:
+# 	traffic_fsm
+# End time: 13:18:46 on Jul 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:46 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/traffic_node.v 
+# -- Compiling module traffic_node
+# 
+# Top level modules:
+# 	traffic_node
+# End time: 13:18:46 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:46 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../rtl/traffic_top.v 
+# -- Compiling module traffic_top
+# 
+# Top level modules:
+# 	traffic_top
+# End time: 13:18:46 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:18:46 on Jul 13,2026
+# vlog -reportprogress 300 -work work ../tb_traffic_top.v 
+# ** Error: (vlog-7) Failed to open design unit file "../tb_traffic_top.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 13:18:46 on Jul 13,2026, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./run_sim.do line 25
+# C:/intelFPGA/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work ../tb_traffic_top.v"
+cd D:/Dev/Code/Traffic_Light_RFID/sim
