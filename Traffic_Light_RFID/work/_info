@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Dev/Code/Traffic_Light_RFID
+vtb_traffic_light_simple
+Z1 !s110 1780299518
+!i10b 1
+!s100 :?N[@O;1CQ[oN1e4EEj8o0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I1gj3z4gY`YcAZEmb>4cVj3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1780299386
+8D:/Dev/Code/Traffic_Light_RFID/tb_traffic_light_simple.v
+FD:/Dev/Code/Traffic_Light_RFID/tb_traffic_light_simple.v
+!i122 0
+L0 9 158
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1780299518.000000
+!s107 D:/Dev/Code/Traffic_Light_RFID/tb_traffic_light_simple.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Dev/Code/Traffic_Light_RFID/tb_traffic_light_simple.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vtraffic_light_simple
+R1
+!i10b 1
+!s100 REW=]mQ2]Dedlo@97@5_j1
+R2
+IPE47:f@cSVYa:1B?miQ7T2
+R3
+R0
+w1780294558
+8D:/Dev/Code/Traffic_Light_RFID/traffic_light_simple.v
+FD:/Dev/Code/Traffic_Light_RFID/traffic_light_simple.v
+!i122 1
+L0 11 125
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/Dev/Code/Traffic_Light_RFID/traffic_light_simple.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Dev/Code/Traffic_Light_RFID/traffic_light_simple.v|
+!i113 1
+R6
+R7
