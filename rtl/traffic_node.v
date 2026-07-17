@@ -127,13 +127,29 @@ module traffic_node (
     tag_priority_lut u_lut_e (.uid(rfid_uid_e), .priority_class(lut_class_e));
     tag_priority_lut u_lut_w (.uid(rfid_uid_w), .priority_class(lut_class_w));
 
+    // Register buffering to break the critical path
+    reg [2:0] reg_class_n, reg_class_s, reg_class_e, reg_class_w;
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            reg_class_n <= 3'd0;
+            reg_class_s <= 3'd0;
+            reg_class_e <= 3'd0;
+            reg_class_w <= 3'd0;
+        end else begin
+            reg_class_n <= lut_class_n;
+            reg_class_s <= lut_class_s;
+            reg_class_e <= lut_class_e;
+            reg_class_w <= lut_class_w;
+        end
+    end
+
     // ─── Priority Arbiter ───
     priority_arbiter u_arb (
         .tag_detected (rfid_tag_detected),
-        .class_n      (lut_class_n),
-        .class_s      (lut_class_s),
-        .class_e      (lut_class_e),
-        .class_w      (lut_class_w),
+        .class_n      (reg_class_n),
+        .class_s      (reg_class_s),
+        .class_e      (reg_class_e),
+        .class_w      (reg_class_w),
         .cur_state    (fsm_cur_state),
         .ev_detect_ns (arb_ev_detect_ns),
         .ev_detect_ew (arb_ev_detect_ew),
