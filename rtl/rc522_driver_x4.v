@@ -55,35 +55,13 @@ module rc522_driver_x4 (
     // RC522 Register Addresses (SPI format: {R/W, addr[5:0], 0})
     //   Write: bit7=0, Read: bit7=1
     // =========================================================================
-    localparam ADDR_W_COMMAND      = 8'h02;  // CommandReg      (0x01)
-    localparam ADDR_W_COM_IEN      = 8'h04;  // ComIEnReg       (0x02)
-    localparam ADDR_W_COM_IRQ      = 8'h08;  // ComIrqReg       (0x04)
-    localparam ADDR_W_FIFO_DATA    = 8'h12;  // FIFODataReg     (0x09)
-    localparam ADDR_W_FIFO_LEVEL   = 8'h14;  // FIFOLevelReg    (0x0A)
-    localparam ADDR_W_BIT_FRAMING  = 8'h1A;  // BitFramingReg   (0x0D)
-    localparam ADDR_W_MODE         = 8'h16;  // ModeReg         (0x0B)
-    localparam ADDR_W_TX_MODE      = 8'h24;  // TxModeReg       (0x12)
-    localparam ADDR_W_RX_MODE      = 8'h26;  // RxModeReg       (0x13)
-    localparam ADDR_W_TX_CONTROL   = 8'h28;  // TxControlReg    (0x14)
-    localparam ADDR_W_TX_ASK       = 8'h2A;  // TxASKReg        (0x15)
-    localparam ADDR_W_TMODE        = 8'h4A;  // TModeReg        (0x25)
-    localparam ADDR_W_TPRESCALER   = 8'h4C;  // TPrescalerReg   (0x26)
-    localparam ADDR_W_TRELOAD_H    = 8'h4E;  // TReloadRegH     (0x27)
-    localparam ADDR_W_TRELOAD_L    = 8'h50;  // TReloadRegL     (0x28)
-    localparam ADDR_W_RF_CFG       = 8'h4C;  // Incorrect; fix below
-    // RFCfgReg is at address 0x26... wait, that's RxModeReg
-    // Let me recalculate: RFCfgReg = 0x26? No.
-    // RC522 registers: RFCfgReg = 0x26 in datasheet? Let me check.
-    // Actually: RFCfgReg = register address 0x26 → SPI write = {0, 100110, 0} = 0x4C
-    // But TPrescalerReg is also 0x4C... That's wrong.
-    // Let me recalculate properly:
-    //   TModeReg     = 0x2A → SPI: {0, 101010, 0} = 0101_0100 = 0x54  ← FIX
-    //   TPrescalerReg= 0x2B → SPI: {0, 101011, 0} = 0101_0110 = 0x56  ← FIX
-    //   TReloadRegH  = 0x2C → SPI: {0, 101100, 0} = 0101_1000 = 0x58  ← FIX
-    //   TReloadRegL  = 0x2D → SPI: {0, 101101, 0} = 0101_1010 = 0x5A  ← FIX
-    //   RFCfgReg     = 0x26 → SPI: {0, 100110, 0} = 0100_1100 = 0x4C
-    // Hmm, wait. Let me re-derive all addresses carefully.
-    // RC522 SPI address byte = {(read?1:0), addr[5], addr[4], addr[3], addr[2], addr[1], addr[0], 0}
+    // RC522 register write address byte = {0, addr[5:0], 0} per MFRC522 datasheet.
+    // Active addresses used in this driver:
+    //   CommandReg=0x01→0x02, ComIrqReg=0x04→0x08, FIFODataReg=0x09→0x12,
+    //   FIFOLevelReg=0x0A→0x14, BitFramingReg=0x0D→0x1A, TxASKReg=0x11→0x22,
+    //   TxModeReg=0x12→0x24, RxModeReg=0x13→0x26, TxControlReg=0x14→0x28,
+    //   TModeReg=0x2A→0x54, TPrescalerReg=0x2B→0x56, TReloadRegH=0x2C→0x58,
+    //   TReloadRegL=0x2D→0x5A, RFCfgReg=0x26→0x4C
 
     // ─── CORRECTED Register Addresses ───
     // Reg 0x01 CommandReg:    W={0,000001,0}=0x02  R={1,000001,0}=0x82

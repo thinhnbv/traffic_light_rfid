@@ -21,6 +21,6 @@ module phase_timer (
             counter <= counter - 1;
     end
 
-    assign expired = (counter == 32'd1) && !load;
+    assign expired = (counter == 32'd0) && !load;
 
 endmodule
