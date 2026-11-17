@@ -6,6 +6,9 @@ module tag_priority_lut (
     // UID mapping from actual RFID cards (uid.txt)
     // Chỉ một vài thẻ đặc biệt được đăng ký ưu tiên.
     // Tất cả thẻ còn lại → class 0 (xe thường, không ưu tiên).
+    // NOTE: spec/TLC_RFID_SPEC_v4.4.md Section 6 lists example UIDs
+    // (A1B2C3D4, E5F6A7B8, 12345678, 9ABCDEF0, 11223344) that differ from
+    // uid.txt; uid.txt is the source of truth for physical cards.
 
     always @(*) begin
         case (uid)

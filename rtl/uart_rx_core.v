@@ -25,7 +25,7 @@ module uart_rx_core (
     localparam S_STOP  = 2'd3;
 
     reg [1:0]  state;
-    reg [12:0] baud_cnt;        // max 5208 → needs 13 bits
+    reg [13:0] baud_cnt;        // max 5208 → needs 13 bits
     reg [2:0]  bit_idx;         // 0-7
     reg [7:0]  rx_shift;        // shift register
     reg        rx_prev;         // previous rx_serial for falling edge detect
